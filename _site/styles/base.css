@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('/styles/manrope-variable.woff2') format('woff2-variations');
+  font-weight: 200 800;
+}
+
+html {
+  background-color: var(--background);
+}
+
+body {
+  margin: 0;
+  padding: 0px 24px;
+}
+
+* {
+  --cta: #4977e9;
+  --background: #fafaff;
+  --text-primary: #34344c;
+  --text-secondary: #5f5e78;
+  --text-tertiary: #a7a6bf;
+  font-family: 'Manrope', sans-serif;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+h2 {
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+div,
+span,
+p,
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
+}
+
+.button-cta {
+  display: block;
+  border-radius: 4px;
+  background-color: var(--cta);
+  width: 105px;
+  height: 48px;
+  color: var(--background);
+  text-decoration: none;
+  margin: 24px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

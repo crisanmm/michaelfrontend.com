@@ -1,0 +1,30 @@
+---
+layout: base-layout
+title: Article title
+---
+
+<main>
+  <article class="article">
+    <h1 class="article-heading">{{ title }}</h1>
+    <p class="text-tertiary date">{{ date | date: '%B %d, %Y' }}</p>
+
+    <div class="content">
+      {{ content }}
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="footer-line"></div>
+
+  <div class="footer-icons">
+    <img src="/img/icons/linkedin.svg" alt="LinkedIn" />
+    <img src="/img/icons/instagram.svg" alt="Instagram" />
+    <img src="/img/icons/twitter.svg" alt="Twitter" />
+    <img src="/img/icons/reddit.svg" alt="Reddit" />
+    <img src="/img/icons/github.svg" alt="Github" />
+    <img src="/img/icons/stackoverflow.svg" alt="stackoverflow" />
+  </div>
+
+  <a href="mailto:test@example.com" class="button-cta"> mail me </a>
+</footer>

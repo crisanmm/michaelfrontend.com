@@ -1,0 +1,12 @@
+<ul>
+  {%- for product in collections.article reversed -%}
+  <li>
+    <a href="{{ product.url }}"
+      >{{ product.title }}
+      <span>{{ product.data.title }}</span>
+      <span>{{ product.data.subtitle }}</span>
+      <span>{{ product.date | date: '%B %d, %Y' }}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,18 @@
+{
+  "name": "michaelfrontend.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy --input=./src/",
+    "serve": "eleventy --input=./src/ --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "html-minifier": "^4.0.0"
+  }
+}
