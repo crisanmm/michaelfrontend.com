@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "eleventy --input=./src/",
-    "serve": "eleventy --input=./src/ --serve"
+    "dev": "eleventy --input=./src/ --serve"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +13,9 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
-    "html-minifier": "^4.0.0"
+    "autoprefixer": "^10.4.2",
+    "eleventy-plugin-svg-contents": "^0.7.0",
+    "html-minifier": "^4.0.0",
+    "postcss": "^8.4.6"
   }
 }

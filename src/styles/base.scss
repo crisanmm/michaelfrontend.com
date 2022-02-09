@@ -9,8 +9,14 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0px 24px;
+}
+
+@media screen and (min-width: 70ch) {
+  body {
+    width: 70ch;
+  }
 }
 
 * {
@@ -23,13 +29,27 @@ body {
   box-sizing: border-box;
 }
 
+strong,
+b {
+  font-weight: 700;
+}
+
+a {
+  color: var(--cta);
+  text-decoration: none;
+}
+
 h1 {
   font-size: 36px;
   font-weight: 400;
   color: var(--text-primary);
 }
 
-h2 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
   color: var(--text-primary);
 }
