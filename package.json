@@ -7,9 +7,9 @@
     "dev": "eleventy --input=./src/ --serve"
   },
   "keywords": [],
-  "author": "",
+  "author": "michaelfrontend",
   "license": "ISC",
-  "description": "",
+  "description": "blogfolio website",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",

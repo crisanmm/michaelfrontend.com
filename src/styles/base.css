@@ -13,9 +13,9 @@ body {
   padding: 0px 24px;
 }
 
-@media screen and (min-width: 70ch) {
+@media screen and (min-width: 730px) {
   body {
-    width: 70ch;
+    max-width: 730px;
   }
 }
 
