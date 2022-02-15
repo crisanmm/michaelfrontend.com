@@ -1,0 +1,144 @@
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('/styles/fonts/source-code-pro.woff2') format('woff2');
+  font-weight: 400;
+}
+
+code {
+  font-family: 'Source Code Pro', monospace;
+
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  color: #6089b4;
+  font-family: 'Source Code Pro', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  font-size: 0.9em;
+  line-height: 1.4em;
+  tab-size: 4;
+  hyphens: none;
+}
+
+pre > code[class*='language-'] {
+  font-size: 1em;
+}
+
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+code[class*='language-']::selection,
+code[class*='language-'] ::selection {
+  background: #434548;
+}
+
+/* Code blocks */
+pre[class*='language-'] {
+  padding: 8px 16px;
+  overflow: auto;
+  background-color: #1e1e1e;
+
+  margin: 0.5em -16px;
+
+  @media screen and (min-width: 730px) {
+    border-radius: 4px;
+  }
+}
+
+:not(pre) > code {
+  background: var(--background-secondary);
+  border-radius: 2px;
+  color: var(--text-primary);
+  padding: 2px 4px;
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: #9a9b99;
+}
+
+.token.doctype {
+  color: #9aa83a;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.string,
+.token.attr-value {
+  color: #9aa83a;
+}
+
+.token.operator {
+  color: #676867;
+}
+
+.token.punctuation {
+  color: #c5c8c6;
+}
+
+.token.entity,
+.token.url,
+.token.symbol,
+.token.number,
+.token.variable,
+.token.constant,
+.token.property,
+.token.regex,
+.token.inserted {
+  color: #9872a2;
+}
+
+.token.plain-text {
+  color: #c5c8c6;
+}
+
+.token.boolean {
+  color: #408080;
+}
+
+.token.atrule,
+.token.keyword,
+.language-autohotkey .token.selector {
+  color: #9872a2;
+}
+
+.token.attr-name {
+  color: #d0b344;
+}
+
+.token.function,
+.token.deleted,
+.language-autohotkey .token.tag {
+  color: #ce6700;
+}
+
+.token.tag,
+.token.selector,
+.language-autohotkey .token.keyword {
+  color: #6089b4;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+pre.show-lines {
+  margin: 0.5em -24px;
+  counter-reset: lineNumber;
+}
+
+pre.show-lines code .highlight-line::before {
+  display: inline-block;
+  counter-increment: lineNumber;
+  content: counter(lineNumber);
+  width: 2ch;
+  text-align: right;
+  margin-right: 16px;
+  color: #858585;
+}

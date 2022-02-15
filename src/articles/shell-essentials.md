@@ -8,21 +8,22 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur li
 
 <h2 class="article-subheading">Must know</h2>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur libero sit amet nibh viverra, et gravida tellus euismod. Sed convallis egestas est, id interdum odio. Suspendisse potenti. Morbi quis magna felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras ultricies ultricies leo, nec hendrerit nisi consequat in. Integer non est faucibus metus viverra fringilla. Vestibulum at purus et urna volutpat bibendum eu at lorem. 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur libero sit amet nibh viverra, et gravida tellus euismod. Sed convallis egestas est, id interdum odio. Suspendisse potenti. Morbi quis magna felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras ultricies ultricies leo, nec hendrerit nisi consequat in. Integer non est faucibus metus viverra 
+`const a = 5;` fringilla. Vestibulum at purus et urna volutpat bibendum eu at lorem. 
 
 ```js
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const htmlmin = require('html-minifier');
-const svgContents = require('eleventy-plugin-svg-contents');
-const postcss = require('postcss');
-const { execSync } = require('child_process');
+
+const sassPlugin = require('./sassPlugin');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(svgContents);
-
-  eleventyConfig.addPassthroughCopy('src/styles');
+  eleventyConfig.addPlugin(syntaxHighlight, { alwaysWrapLineHighlights: true });
+  eleventyConfig.addPlugin(sassPlugin);
   eleventyConfig.addPassthroughCopy('src/img');
+  eleventyConfig.addPassthroughCopy('src/styles/fonts');
+// dsadsa
+  eleventyConfig.addWatchTarget('src/styles');
 
   eleventyConfig.addTransform('process-html', async function (content, outputPath) {
     if (outputPath && outputPath.endsWith('.html')) {
@@ -33,17 +34,16 @@ module.exports = function (eleventyConfig) {
       });
     }
   });
-
-  // eleventyConfig.on('eleventy.after', async () => {
-  //   execSync('npx postcss src/styles/all.scss --output _site/styles/all.css');
-  // });
 };
-
 ```
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur libero sit amet nibh viverra, et gravida tellus euismod. Sed convallis egestas est, id interdum odio. Suspendisse potenti. Morbi quis magna felis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras ultricies ultricies leo, nec hendrerit nisi consequat in. Integer non est faucibus metus viverra fringilla. Vestibulum at purus et urna volutpat bibendum eu at lorem. 
 
-<img src="/img{{ page.url }}/shell.png" alt="shell" class="image">
+<!-- <img src="/img/{{ page.url }}/shell.png" alt="shell"> -->
+
+{% capture shellImageUrl %}./src/img{{ page.url }}shell.png{% endcapture %}
+
+{% image shellImageUrl, "shell", "(max-width: 1460px) 50vw, 100vw" %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur libero sit amet nibh viverra, et gravida tellus euismod. Sed convallis egestas est, id interdum odio. Suspendisse potenti. Morbi quis magna felis. 
 Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras ultricies ultricies leo, nec hendrerit nisi consequat in.

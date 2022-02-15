@@ -12,10 +12,12 @@
   "description": "blogfolio website",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-img": "^1.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
     "autoprefixer": "^10.4.2",
-    "eleventy-plugin-svg-contents": "^0.7.0",
+    "cssnano": "^5.0.17",
     "html-minifier": "^4.0.0",
-    "postcss": "^8.4.6"
+    "postcss": "^8.4.6",
+    "sass": "^1.49.7"
   }
 }

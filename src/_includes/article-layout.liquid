@@ -4,11 +4,11 @@ title: Article title
 ---
 
 <main>
-  <article class="line-numbers">
+  <article>
     <h1 class="article-heading">{{ title }}</h1>
     <p class="text-tertiary date">{{ date | date: '%B %d, %Y' }}</p>
 
-    <div class="content">
+    <div class="text-secondary">
       {{ content }}
     </div>
   </article>
@@ -19,23 +19,23 @@ title: Article title
 
   <div class="footer-icons">
     <a href="https://www.linkedin.com/in/crisan-mihai" target="_blank" rel="noopener noreferrer">
-      {{ '/src/img/icons/linkedin.svg' | svgContents }}
+      {% render 'img/icons/linkedin.svg' %}
     </a>
 
     <a href="https://www.instagram.com/michaelfrontend" target="_blank" rel="noopener noreferrer">
-      {{ '/src/img/icons/instagram.svg' | svgContents }}
+      {% render 'img/icons/instagram.svg' %}
     </a>
 
     <a href="https://twitter.com/michaelfrontend" target="_blank" rel="noopener noreferrer">
-      {{ '/src/img/icons/twitter.svg' | svgContents }}
+      {% render 'img/icons/twitter.svg' %}
     </a>
 
     <a href="https://reddit.com/user/michaelfrontend" target="_blank" rel="noopener noreferrer">
-      {{ '/src/img/icons/reddit.svg' | svgContents }}
+      {% render 'img/icons/reddit.svg' %}
     </a>
 
     <a href="https://github.com/crisanmm" target="_blank" rel="noopener noreferrer">
-      {{ '/src/img/icons/github.svg' | svgContents }}
+      {% render 'img/icons/github.svg' %}
     </a>
 
     <a
@@ -43,7 +43,7 @@ title: Article title
       target="_blank"
       rel="noopener noreferrer"
     >
-      {{ '/src/img/icons/stackoverflow.svg' | svgContents }}
+      {% render 'img/icons/stackoverflow.svg' %}
     </a>
   </div>
 
