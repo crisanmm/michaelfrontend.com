@@ -3,10 +3,20 @@ layout: base-layout
 title: Article title
 ---
 
+<header class="header">
+  <a href="https://michaelfrontend.com" class="header__title"> michaelfrontend.com </a>
+  <button class="header__color-scheme-switch hidden" aria-label="change color scheme">
+    <div class="header_color-scheme-switch-icon--moon hidden">
+      {% render 'img/icons/moon.svg' %}
+    </div>
+    <div class="header_color-scheme-switch-icon--sun hidden">{% render 'img/icons/sun.svg' %}</div>
+  </button>
+</header>
+
 <main>
-  <article>
-    <h1 class="article-heading">{{ title }}</h1>
-    <p class="text-tertiary date">{{ date | date: '%B %d, %Y' }}</p>
+  <article class="article">
+    <h1 class="article__heading">{{ title }}</h1>
+    <p class="article__date text-tertiary">{{ date | date: '%B %d, %Y' }}</p>
 
     <div class="text-secondary">
       {{ content }}
@@ -14,27 +24,47 @@ title: Article title
   </article>
 </main>
 
-<footer>
-  <div class="footer-line"></div>
+<footer class="footer">
+  <div class="footer__line"></div>
 
-  <div class="footer-icons">
-    <a href="https://www.linkedin.com/in/crisan-mihai" target="_blank" rel="noopener noreferrer">
+  <div class="footer__icons">
+    <a
+      href="https://www.linkedin.com/in/crisan-mihai"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="linkedin"
+    >
       {% render 'img/icons/linkedin.svg' %}
     </a>
 
-    <a href="https://www.instagram.com/michaelfrontend" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://www.instagram.com/michaelfrontend"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="instagram"
+    >
       {% render 'img/icons/instagram.svg' %}
     </a>
 
-    <a href="https://twitter.com/michaelfrontend" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://twitter.com/michaelfrontend"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="twitter"
+    >
       {% render 'img/icons/twitter.svg' %}
     </a>
 
-    <a href="https://reddit.com/user/michaelfrontend" target="_blank" rel="noopener noreferrer">
+    <a
+      href="https://reddit.com/user/michaelfrontend"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="reddit"
+    >
       {% render 'img/icons/reddit.svg' %}
     </a>
 
-    <a href="https://github.com/crisanmm" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/crisanmm" target="_blank" rel="noopener noreferrer" title="github">
       {% render 'img/icons/github.svg' %}
     </a>
 
@@ -42,10 +72,13 @@ title: Article title
       href="https://stackoverflow.com/users/10668140/michael-crisan"
       target="_blank"
       rel="noopener noreferrer"
+      title="stackoverflow"
     >
       {% render 'img/icons/stackoverflow.svg' %}
     </a>
   </div>
 
-  <a href="mailto:me@michaelfrontend.com" class="button-cta">mail me</a>
+  <a href="mailto:me@michaelfrontend.com" class="button-cta"
+    >send me an email {% render 'img/icons/mail.svg' %}
+  </a>
 </footer>

@@ -2,11 +2,11 @@
   font-family: 'Source Code Pro';
   src: url('/styles/fonts/source-code-pro.woff2') format('woff2');
   font-weight: 400;
+  font-display: swap;
 }
 
 code {
   font-family: 'Source Code Pro', monospace;
-
 }
 
 code[class*='language-'],
@@ -19,7 +19,7 @@ pre[class*='language-'] {
   word-spacing: normal;
   word-break: normal;
   font-size: 0.9em;
-  line-height: 1.4em;
+  line-height: 1.6;
   tab-size: 4;
   hyphens: none;
 }
@@ -37,14 +37,13 @@ code[class*='language-'] ::selection {
 
 /* Code blocks */
 pre[class*='language-'] {
-  padding: 8px 16px;
+  padding: $spacing ($spacing * 2);
   overflow: auto;
-  background-color: #1e1e1e;
-
-  margin: 0.5em -16px;
+  background-color: #030303;
+  margin: ($spacing * 2) ($spacing * -2) 0 ($spacing * -2);
 
   @media screen and (min-width: 730px) {
-    border-radius: 4px;
+    border-radius: ($spacing * 0.5);
   }
 }
 
@@ -52,7 +51,7 @@ pre[class*='language-'] {
   background: var(--background-secondary);
   border-radius: 2px;
   color: var(--text-primary);
-  padding: 2px 4px;
+  padding: ($spacing * 0.25) ($spacing * 0.5);
 }
 
 .token.comment,
@@ -128,12 +127,12 @@ pre[class*='language-'] {
   font-style: italic;
 }
 
-pre.show-lines {
-  margin: 0.5em -24px;
+pre[class*='language-'].show-lines {
+  margin: ($spacing * 2) ($spacing * -3) 0 ($spacing * -3);
   counter-reset: lineNumber;
 }
 
-pre.show-lines code .highlight-line::before {
+pre[class*='language-'].show-lines code .highlight-line::before {
   display: inline-block;
   counter-increment: lineNumber;
   content: counter(lineNumber);

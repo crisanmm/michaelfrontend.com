@@ -1,0 +1,49 @@
+@use 'sass:map';
+
+$spacing: 8px;
+
+$white: #fafaff;
+
+$light: (
+  cta: #2e6be5,
+  background: #fafaff,
+  background-secondary: #e5e8ff,
+  text-primary: #34344c,
+  text-secondary: #5f5e78,
+  text-tertiary: #707099,
+  color-scheme-switch: #f8d763
+);
+
+$dark: (
+  cta: #497ee9,
+  background: #111322,
+  background-secondary: #313668,
+  text-primary: #c8c8da,
+  text-secondary: #9796b0,
+  text-tertiary: #7d7da1,
+  color-scheme-switch: #c8c8da,
+);
+
+@mixin dark-color-scheme {
+  --cta: #{map.get($dark, 'cta')};
+  --background: #{map.get($dark, 'background')};
+  --background-secondary: #{map.get($dark, 'background-secondary')};
+  --text-primary: #{map.get($dark, 'text-primary')};
+  --text-secondary: #{map.get($dark, 'text-secondary')};
+  --text-tertiary: #{map.get($dark, 'text-tertiary')};
+  --color-scheme-switch: #{map.get($dark, 'color-scheme-switch')};
+}
+
+@mixin light-color-scheme {
+  --cta: #{map.get($light, 'cta')};
+  --background: #{map.get($light, 'background')};
+  --background-secondary: #{map.get($light, 'background-secondary')};
+  --text-primary: #{map.get($light, 'text-primary')};
+  --text-secondary: #{map.get($light, 'text-secondary')};
+  --text-tertiary: #{map.get($light, 'text-tertiary')};
+  --color-scheme-switch: #{map.get($light, 'color-scheme-switch')};
+}
+
+@import 'base';
+@import 'article';
+@import 'highlight';

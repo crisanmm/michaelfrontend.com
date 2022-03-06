@@ -1,13 +1,26 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="Michael Frontend" />
+    <meta name="description" content="Blogfolio created by Michael Frontend" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ subtitle }}" />
+
     <style>
-      {{ "src/styles/css/all.scss" | sassCompile }}
+      {% compileSass "src/styles/scss/all.scss" %}
     </style>
+
     <title>{{ title }}</title>
   </head>
   <body>
     {{ content }}
+    <script>
+      {% bundleJS "src/js/index.js" %}
+    </script>
   </body>
 </html>

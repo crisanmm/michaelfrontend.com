@@ -2,44 +2,42 @@
   font-family: 'Manrope';
   src: url('/styles/fonts/manrope-variable.woff2') format('woff2-variations');
   font-weight: 200 800;
+  font-display: swap;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  --white: #fafaff;
-  --cta: #4977e9;
+body {
+  --white: #{$white};
 
   @media screen and (prefers-color-scheme: light) {
-    --background: #fafaff;
-    --background-secondary: #e5e8ff;
-    --text-primary: #34344c;
-    --text-secondary: #5f5e78;
-    --text-tertiary: #a7a6bf;
+    @include light-color-scheme;
   }
 
   @media screen and (prefers-color-scheme: dark) {
-    --background: #111322;
-    --background-secondary: #313668;
-    --text-primary: #c8c8da;
-    --text-secondary: #9796b0;
-    --text-tertiary: #545473;
+    @include dark-color-scheme;
   }
-}
 
-body {
+  &.light {
+    @include light-color-scheme;
+  }
+
+  &.dark {
+    @include dark-color-scheme;
+  }
+
   margin: 0 auto;
-  padding: 0px 16px;
+  padding: 0 ($spacing * 2);
   transition-property: color, background-color;
   transition-duration: 300ms;
   background-color: var(--background);
   font-family: 'Manrope', sans-serif;
-  line-height: 1.65;
+  line-height: 1.8;
 
-  @media screen and (min-width: 730px) {
-    max-width: 730px;
+  @media screen and (min-width: 780px) {
+    max-width: 780px;
   }
 }
 
@@ -78,20 +76,22 @@ h6 {
 }
 
 .button-cta {
-  display: block;
-  border-radius: 4px;
-  background-color: var(--cta);
-  width: 105px;
-  height: 48px;
-  color: var(--white);
-  text-decoration: none;
-  margin: 24px auto;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 700;
+  margin-top: $spacing * 1.5;
+
+  svg {
+    color: var(--text-primary);
+    margin-left: $spacing;
+  }
 }
 
 footer {
   margin-bottom: 32px;
+}
+
+.hidden {
+  display: none;
 }
