@@ -82,6 +82,10 @@ h6 {
   font-weight: 700;
   margin-top: $spacing * 1.5;
 
+  &--index {
+    justify-content: flex-start;
+  }
+
   svg {
     color: var(--text-primary);
     margin-left: $spacing;
@@ -94,4 +98,70 @@ footer {
 
 .hidden {
   display: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: ($spacing * 8) 0;
+
+  &__title {
+    color: var(--cta);
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__color-scheme-switch {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-scheme-switch);
+    border-width: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 0;
+    margin-left: auto;
+  }
+}
+
+.footer {
+  &__line {
+    background-color: var(--text-tertiary);
+    margin: ($spacing * 4) auto;
+    width: 90%;
+    height: 1px;
+    border-radius: 2px;
+
+    @media screen and (min-width: 375px) {
+      max-width: 90%;
+    }
+
+    @media screen and (min-width: 460px) {
+      width: 75%;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--intro {
+      margin-top: $spacing * 4;
+      justify-content: flex-start;
+    }
+
+    & > * {
+      margin-left: $spacing * 1.25;
+      margin-right: $spacing * 1.25;
+      color: var(--text-primary);
+
+      &:first-child {
+        margin-left: $spacing * 0.5;
+      }
+    }
+  }
 }

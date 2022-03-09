@@ -1,5 +1,6 @@
 ---
 title: JavaScript toy application
+subtitle: While going through a course I figured I want to take on a new challenge. I decided to create an application of my own, hoping that I would face more interesting challenges, therefore I built a clone of a popular application with only the purpose of learning. Having the goal of writing tutorial-like articles in the future, I took the opportunity of practicing writing on the application I built.
 date: 2022-02-08
 ---
 

@@ -1,0 +1,15 @@
+---
+layout: base-layout
+---
+
+<header class="header">
+  <a href="https://michaelfrontend.com" class="header__title">michaelfrontend.com</a>
+  <button class="header__color-scheme-switch hidden" aria-label="change color scheme">
+    <div class="header_color-scheme-switch-icon--moon hidden">
+      {% render 'img/icons/moon.svg' %}
+    </div>
+    <div class="header_color-scheme-switch-icon--sun hidden">{% render 'img/icons/sun.svg' %}</div>
+  </button>
+</header>
+
+{{ content }}

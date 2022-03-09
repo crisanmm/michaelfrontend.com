@@ -1,0 +1,40 @@
+.blog {
+  * {
+    margin-top: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__heading {
+    margin-bottom: ($spacing * 6);
+  }
+
+  &__card {
+    display: block;
+    margin-bottom: ($spacing * 4);
+    padding: ($spacing * 2);
+    border-radius: $spacing;
+    background-color: var(--background-secondary);
+    width: 100%;
+    min-height: 140px;
+
+    &-date {
+      margin-bottom: $spacing * 2;
+      color: var(--text-tertiary);
+    }
+
+    &-title {
+      color: var(--text-primary);
+      margin-bottom: $spacing * 0.5;
+    }
+
+    &-subtitle {
+      color: var(--text-secondary);
+      margin-bottom: 0;
+    }
+  }
+}

@@ -10,8 +10,8 @@ $light: (
   background-secondary: #e5e8ff,
   text-primary: #34344c,
   text-secondary: #5f5e78,
-  text-tertiary: #707099,
-  color-scheme-switch: #f8d763
+  text-tertiary: #63638c,
+  color-scheme-switch: #f8d763,
 );
 
 $dark: (
@@ -19,8 +19,8 @@ $dark: (
   background: #111322,
   background-secondary: #313668,
   text-primary: #c8c8da,
-  text-secondary: #9796b0,
-  text-tertiary: #7d7da1,
+  text-secondary: #afafc5,
+  text-tertiary: #a3a2b9,
   color-scheme-switch: #c8c8da,
 );
 
@@ -45,5 +45,6 @@ $dark: (
 }
 
 @import 'base';
+@import 'index';
 @import 'article';
-@import 'highlight';
+@import 'blog';

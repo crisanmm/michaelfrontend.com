@@ -1,12 +1,22 @@
-<ul>
-  {%- for product in collections.article reversed -%}
-  <li>
-    <a href="{{ product.url }}"
-      >{{ product.title }}
-      <span>{{ product.data.title }}</span>
-      <span>{{ product.data.subtitle }}</span>
-      <span>{{ product.date | date: '%B %d, %Y' }}</span>
-    </a>
-  </li>
-  {% endfor %}
-</ul>
+---
+layout: blog-common-layout
+title: Michael's blog
+---
+
+<div class="blog">
+  <main>
+    <h1 class="blog__heading">My personal blog</h1>
+
+    <ul class="blog__list">
+      {%- for article in collections.blog -%}
+      <li>
+        <a href="{{ article.url }}" class="blog__card">
+          <p class="blog__card-date">{{ article.date | date: '%B %d, %Y' }}</p>
+          <h2 class="blog__card-title">{{ article.data.title }}</h2>
+          <p class="blog__card-subtitle">{{ article.data.subtitle }}</p>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </main>
+</div>

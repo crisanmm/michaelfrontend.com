@@ -1,0 +1,101 @@
+.index {
+  color: var(--text-secondary);
+
+  * {
+    margin-top: 0;
+  }
+
+  &__heading {
+    margin-top: $spacing * 20;
+    line-height: 1.5;
+  }
+
+  &__intro {
+    margin-top: $spacing * 20;
+
+    &-heading {
+      margin-bottom: $spacing;
+    }
+
+    &-text {
+      max-width: 540px;
+      margin-bottom: $spacing;
+    }
+  }
+
+  &__history {
+    &-heading {
+      margin-top: $spacing * 20;
+      margin-bottom: $spacing * 5;
+    }
+
+    &-timeline {
+      position: relative;
+      padding-left: $spacing * 8;
+
+      &-line {
+        position: absolute;
+        height: 80%;
+        width: 2px;
+        top: 50%;
+        left: $spacing * 3.5;
+        transform: translateY(-50%);
+        background-color: var(--text-primary);
+      }
+
+      &-point {
+        position: relative;
+        margin-bottom: $spacing * 10;
+
+        &-dot {
+          $innerDotSize: 14px;
+          $outerDotSize: 26px;
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: $innerDotSize;
+            height: $innerDotSize;
+            background-color: var(--background);
+            border-radius: 50%;
+          }
+
+          position: absolute;
+          top: 50%;
+          left: -0.5 * ($spacing * 8 + $outerDotSize) - 3px;
+          transform: translateY(-50%);
+          width: $outerDotSize;
+          height: $outerDotSize;
+          background-color: var(--cta);
+          border-radius: 50%;
+        }
+
+        &-title {
+          color: var(--text-primary);
+          margin-bottom: 0;
+            // font-weight: 300;
+        }
+
+        &-description {
+          color: var(--text-secondary);
+          font-weight: 200;
+        }
+      }
+    }
+  }
+
+  &__past-work {
+    margin-top: $spacing * 10;
+  }
+
+  &__blog {
+    margin-top: $spacing * 3;
+  }
+
+  .footer {
+    margin-top: $spacing * 6;
+  }
+}

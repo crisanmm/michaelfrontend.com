@@ -1,8 +1,128 @@
 ---
 layout: base-layout
-title: Michael's blog
+title: Michael's portfolio
 ---
 
-<main class="text-secondary">
-  <p>Hey there, I am working on this page as we speak 😅</p>
-</main>
+<header class="header">
+  <button class="header__color-scheme-switch hidden" aria-label="change color scheme">
+    <div class="header_color-scheme-switch-icon--moon hidden">
+      {% render 'img/icons/moon.svg' %}
+    </div>
+    <div class="header_color-scheme-switch-icon--sun hidden">{% render 'img/icons/sun.svg' %}</div>
+  </button>
+</header>
+
+<div class="index">
+  <main>
+    <h1 class="index__heading">
+      Hey 👋 ,
+      <br />
+      my name is Michael
+    </h1>
+
+    <div class="index__intro">
+      <h2 class="index__intro-heading">whoami</h2>
+      <p class="index__intro-text">
+        A detail-oriented software engineer and tech geek with an eye for design. I have worked and
+        studied in the field of computer science for the past 4 years, with the purpose of creating
+        the highest-quality products.
+      </p>
+
+      <a href="mailto:me@michaelfrontend.com" class="button-cta button-cta--index"
+        >send me an email {% render 'img/icons/mail.svg' %}
+      </a>
+    </div>
+
+    <div class="index__history">
+      <h2 class="index__history-heading">history</h2>
+
+      <div class="index__history-timeline">
+        <div class="index__history-timeline-line"></div>
+
+        <div class="index__history-timeline-point">
+          <div class="index__history-timeline-point-dot"></div>
+          <p class="index__history-timeline-point-title">Deloitte Digital</p>
+          <p class="index__history-timeline-point-description">november 2021 - present</p>
+        </div>
+
+        <div class="index__history-timeline-point">
+          <div class="index__history-timeline-point-dot"></div>
+          <p class="index__history-timeline-point-title">Centric</p>
+          <p class="index__history-timeline-point-description">july 2021 - october 2021</p>
+        </div>
+
+        <div class="index__history-timeline-point">
+          <div class="index__history-timeline-point-dot"></div>
+          <p class="index__history-timeline-point-title">Faculty of Computer Science Iasi</p>
+          <p class="index__history-timeline-point-description">october 2018 - july 2021</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="index__past-work">
+      <a href="https://michaelfrontend.com/past-work">past work</a>
+    </h2>
+
+    <h2 class="index__blog">
+      <a href="https://michaelfrontend.com/blog"> blog</a>
+    </h2>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__icons footer__icons--intro">
+      <a
+        href="https://www.linkedin.com/in/crisan-mihai"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="linkedin"
+      >
+        {% render 'img/icons/linkedin.svg' %}
+      </a>
+
+      <a
+        href="https://www.instagram.com/michaelfrontend"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="instagram"
+      >
+        {% render 'img/icons/instagram.svg' %}
+      </a>
+
+      <a
+        href="https://twitter.com/michaelfrontend"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="twitter"
+      >
+        {% render 'img/icons/twitter.svg' %}
+      </a>
+
+      <a
+        href="https://reddit.com/user/michaelfrontend"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="reddit"
+      >
+        {% render 'img/icons/reddit.svg' %}
+      </a>
+
+      <a
+        href="https://github.com/crisanmm"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="github"
+      >
+        {% render 'img/icons/github.svg' %}
+      </a>
+
+      <a
+        href="https://stackoverflow.com/users/10668140/michael-crisan"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="stackoverflow"
+      >
+        {% render 'img/icons/stackoverflow.svg' %}
+      </a>
+    </div>
+  </footer>
+</div>
