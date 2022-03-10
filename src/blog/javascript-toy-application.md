@@ -2,6 +2,7 @@
 title: JavaScript toy application
 subtitle: While going through a course I figured I want to take on a new challenge. I decided to create an application of my own, hoping that I would face more interesting challenges, therefore I built a clone of a popular application with only the purpose of learning. Having the goal of writing tutorial-like articles in the future, I took the opportunity of practicing writing on the application I built.
 date: 2022-02-08
+eleventyExcludeFromCollections: true
 ---
 
 While I was going through [The Complete JavaScript Course 2022: From Zero to Expert!](https://www.udemy.com/course/the-complete-javascript-course/) course on Udemy I noticed the author had in plan to create applications as to show how things tie together and how to apply the new-found knowledge in a practical way. Having finished other similar courses where practical applications are built, an idea had crossed my mind. Why don't I come up with a project idea all by myself and build something else instead? This would put me in a more challenging place because if I would be facing issues, I would not be able to rely on the author facing the same issues and simply follow his steps in order to fix them. This way I would go on my own path towards building something that I like, something that would definitely involve more effort from my side, which would mean more lessons to be learned! Sounds great!

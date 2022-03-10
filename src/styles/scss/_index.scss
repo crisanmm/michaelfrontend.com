@@ -47,6 +47,10 @@
         position: relative;
         margin-bottom: $spacing * 10;
 
+        &:last-child {
+          margin-bottom: $spacing * 7.5;
+        }
+
         &-dot {
           $innerDotSize: 14px;
           $outerDotSize: 26px;
@@ -76,20 +80,20 @@
         &-title {
           color: var(--text-primary);
           margin-bottom: 0;
-            // font-weight: 300;
+          font-weight: 400;
         }
 
         &-description {
           color: var(--text-secondary);
-          font-weight: 200;
+          font-weight: 250;
         }
       }
     }
   }
 
-  &__past-work {
-    margin-top: $spacing * 10;
-  }
+//   &__past-work {
+//     margin-top: $spacing * 10;
+//   }
 
   &__blog {
     margin-top: $spacing * 3;
