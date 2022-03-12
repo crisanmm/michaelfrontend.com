@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <meta name="author" content="Michael Frontend" />
-    <meta name="description" content="Blogfolio created by Michael Frontend" />
+    <meta name="description" content="{{ subtitle }}" />
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{ title }}" />
     <meta property="og:description" content="{{ subtitle }}" />
+
+    {% favicon 'src/img/favicon.svg' %}
 
     <style>
       {% compileSass "src/styles/scss/all.scss" %}

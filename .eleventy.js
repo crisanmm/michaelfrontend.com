@@ -1,4 +1,5 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const faviconPlugin = require('eleventy-favicon');
 const htmlmin = require('html-minifier');
 const compileSassShortcode = require('./shortcodes/compileSass');
 const imageShortcode = require('./shortcodes/image');
@@ -9,6 +10,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(compileSassShortcode);
   eleventyConfig.addPlugin(imageShortcode);
   eleventyConfig.addPlugin(bundleJSShortcode);
+  eleventyConfig.addPlugin(faviconPlugin);
 
   eleventyConfig.addPassthroughCopy('src/img/icons');
   eleventyConfig.addPassthroughCopy('src/styles/fonts');
