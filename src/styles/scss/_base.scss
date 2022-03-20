@@ -105,6 +105,7 @@ footer {
   justify-content: space-between;
   align-items: baseline;
   margin: ($spacing * 8) 0;
+  height: 24px;
 
   &__title {
     color: var(--cta);
