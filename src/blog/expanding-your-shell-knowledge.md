@@ -194,7 +194,7 @@ $ echo $var
 50
 ```
 
-One instance in the real world where sourcing a script is used is for creating a [python virtual environment](https://docs.python.org/3/library/venv.html), changes have to be done to the `PATH` variable in order to create the virtual environment, so sourcing a script it is the way to go.
+One instance in the real world where sourcing a script is used is for creating a [python virtual environment](https://docs.python.org/3/library/venv.html), changes have to be done to the `PATH` variable in order to create the virtual environment, so sourcing a script is the way to go.
 
 By the way, `source` is a bashism (a shell command specific to the bash interpreter). `.` is an alias to `source` and `.` should be used instead because it goes along with the POSIX specification. The reason I didn't use `.` in the examples above is because `source` is easier to refer to, also `.` could be confused with the other `.` which stands for the current directory.
 
