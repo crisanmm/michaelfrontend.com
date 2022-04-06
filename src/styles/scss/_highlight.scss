@@ -5,27 +5,34 @@
   font-display: swap;
 }
 
-code {
+pre {
   font-family: 'Source Code Pro', monospace;
-}
-
-code[class*='language-'],
-pre[class*='language-'] {
-  color: #6089b4;
-  font-family: 'Source Code Pro', monospace;
+  background-color: #030303;
+  color: #c8c8da;
   direction: ltr;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  font-size: 0.9em;
+  font-size: 0.95em;
   line-height: 1.6;
   tab-size: 4;
   hyphens: none;
+  padding: $spacing ($spacing * 2);
+  overflow: auto;
+  margin: ($spacing * 2) ($spacing * -2) 0 ($spacing * -2);
+
+  @media screen and (min-width: 730px) {
+    border-radius: ($spacing * 0.5);
+  }
+
+  &::selection {
+    background: #434548;
+  }
 }
 
-pre > code[class*='language-'] {
-  font-size: 1em;
+code {
+  font-family: 'Source Code Pro', monospace;
 }
 
 pre[class*='language-']::selection,
@@ -37,10 +44,7 @@ code[class*='language-'] ::selection {
 
 /* Code blocks */
 pre[class*='language-'] {
-  padding: $spacing ($spacing * 2);
-  overflow: auto;
-  background-color: #030303;
-  margin: ($spacing * 2) ($spacing * -2) 0 ($spacing * -2);
+  color: #6089b4;
 
   @media screen and (min-width: 730px) {
     border-radius: ($spacing * 0.5);
@@ -48,9 +52,9 @@ pre[class*='language-'] {
 }
 
 :not(pre) > code {
-  background: var(--background-secondary);
+  background: var(--code-background);
   border-radius: 2px;
-  color: var(--text-primary);
+  color: var(--code-color);
   padding: ($spacing * 0.25) ($spacing * 0.5);
 }
 

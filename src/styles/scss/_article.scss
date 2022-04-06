@@ -1,5 +1,14 @@
 .article {
   article {
+    h2 {
+      margin-top: $spacing * 6;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-top: $spacing * 4;
+    }
+
     a {
       font-weight: 700;
     }

@@ -12,6 +12,8 @@ $light: (
   text-secondary: #5f5e78,
   text-tertiary: #63638c,
   color-scheme-switch: #f8d763,
+  code-background: #f0f1ff,
+  code-color: #34344c,
 );
 
 $dark: (
@@ -22,6 +24,8 @@ $dark: (
   text-secondary: #afafc5,
   text-tertiary: #a3a2b9,
   color-scheme-switch: #c8c8da,
+  code-background: #030303,
+  code-color: #c8c8da,
 );
 
 @mixin dark-color-scheme {
@@ -32,6 +36,8 @@ $dark: (
   --text-secondary: #{map.get($dark, 'text-secondary')};
   --text-tertiary: #{map.get($dark, 'text-tertiary')};
   --color-scheme-switch: #{map.get($dark, 'color-scheme-switch')};
+  --code-background: #{map.get($dark, 'code-background')};
+  --code-color: #{map.get($dark, 'code-color')};
 }
 
 @mixin light-color-scheme {
@@ -42,6 +48,8 @@ $dark: (
   --text-secondary: #{map.get($light, 'text-secondary')};
   --text-tertiary: #{map.get($light, 'text-tertiary')};
   --color-scheme-switch: #{map.get($light, 'color-scheme-switch')};
+  --code-background: #{map.get($light, 'code-background')};
+  --code-color: #{map.get($light, 'code-color')};
 }
 
 @import 'base';

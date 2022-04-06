@@ -17,7 +17,7 @@
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.17",
     "eleventy-favicon": "^1.1.2",
-    "esbuild": "^0.14.25",
+    "esbuild": "^0.14.29",
     "html-minifier": "^4.0.0",
     "postcss": "^8.4.6",
     "sass": "^1.49.7",
