@@ -33,9 +33,10 @@
       position: relative;
       padding-left: $spacing * 8;
 
-      &-line {
+      &::before {
+        content: '';
         position: absolute;
-        height: 80%;
+        height: calc(100% - 20 * 2px);
         width: 2px;
         top: 50%;
         left: $spacing * 3.5;
@@ -91,9 +92,9 @@
     }
   }
 
-//   &__past-work {
-//     margin-top: $spacing * 10;
-//   }
+  //   &__past-work {
+  //     margin-top: $spacing * 10;
+  //   }
 
   &__blog {
     margin-top: $spacing * 3;
